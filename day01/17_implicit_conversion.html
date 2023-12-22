@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 隐式转换 +号两边只要有一个是字符串 都会把另外一个转成字符串
+        // 除了+以外的算术运算符 比如 - * /等都会把数据类型转成数字类型
+        console.log("123" + 123) //123123
+        console.log("123" * 2) //246
+        console.log("123" / 3) //41
+        console.log("123" % 3) //0
+        console.log(typeof +"123") //Number
+        console.log(typeof 123 +"123") //Number123
+        console.log(+'11' + 11) //22
+    </script>
+</body>
+</html>
