@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getSum(x, y) {
+            x = x || 0
+            y = y || 0
+            console.log(x + y)
+        }
+        getSum(1, 2)
+        // 等价于以下代码
+        function getSum(x = 0, y = 0) {
+            console.log(x + y)
+        }
+        getSum(1, 2)
+
+        console.log(false && 22)
+        console.log(false && 3 + 5) //false
+
+        let age = 18
+        console.log(false && age++) //age++ 不执行 一假则假
+        console.log(age) //18
+        console.log(true || age++) //age++ 不执行 一真则真
+        console.log(age) //18
+
+        console.log(11 && 22) //都是真，返回最后一个真值
+        console.log(11 || 22) //输出第一个真值
+        // 显示转换
+        // Boolean()
+        // '', 0, undefined, null, false, NaN 转换后都是false 其余则为true
+
+        // 1.有字符串的 "" + 1, 结果是 "1"
+        // 2.减法 - (像大多数科学运算一样) 只能用于数字, 它会使空字符串""转换为0
+        // 3.null 经过数字转换之后变为0
+        // 4.undefined经过数字转换之后会变为NaN
+
+        // '' - 2 = -2
+        // null + 3 = 3
+        // undefined + 3 = NaN
+        // null == undefined true
+        // null === undefined false
+
+        // 拓展题1，封装some函数查找数组中是否存在某元素
+        function some(ele, arr = []) {
+            for (let index = 0; index < arr.length; index++) {
+                if (ele === arr[index]) {
+                    return true
+                }
+            }
+            return false
+        }
+        // 拓展题2，封装findIndex函数返回查找元素在数组中的索引号
+        function findIndex(ele, arr = []) {
+            let indexArr = []
+            for (let index = 0; index < arr.length; index++) {
+                if (ele === arr[index]) {
+                    indexArr.push(index)
+                }
+            }
+            return indexArr.length !== 0 ? indexArr : -1
+        }
+        console.log(findIndex(5, [0, 1, 1, 2, 3]));
+    </script>
+</body>
+
+</html>

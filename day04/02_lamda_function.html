@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 具名函数可以在任何位置调用，匿名函数必须先声明后调用
+        let fn = function (a, b) {
+            console.log(a + b)
+        };
+        fn(1, 2);
+        // 立即执行函数 第一种写法, abc可写可不写
+        (function abc(a,b) {
+            console.log('立即执行')
+            console.log(a+b)
+        })(1,2);
+        // 立即执行函数 第二种写法
+        (function (a,b) {
+            console.log('立即执行')
+            console.log(a+b)
+        }(1,2));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = []
+        console.log(arr)
+        console.log(arr[0]) // undefined
+        arr[0] = 1
+        console.log(arr[0]) // 1
+        arr[1] = 5
+        // push 新增 返回新增后当前数组的长度
+        console.log(arr.push(2, 3))
+        // unshift 将一个或多个元素添加到数组的开头, 并返回数组的新长度
+        console.log(arr.unshift(0, 1))
+        console.log(arr)
+        // practice: 将数组[2,0,6,1,77,0,52,0,25,7]中大于等于10的元素选出来，放入新数组
+        let target = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7]
+        let result = []
+        let noZeroResult = []
+        for (let index = 0; index < target.length; index++) {
+            target[index] >= 10 ? result.push(target[index]) : target
+            target[index] !== 0 ? noZeroResult.push(target[index]) : target
+        }
+        console.log(`数组中大于10组成的新数组为${result}`)
+        console.log(`数组中不等于0组成的新数组为${noZeroResult}`)
+        
+        // pop 删除最后一个元素,并返回该元素的值
+        console.log(target.pop())
+        console.log(target)
+        // shift 删除第一个元素,并返回该元素的值
+        console.log(target.shift())
+        console.log(target)
+        // splice(起始位置, 删除几个元素) 删除指定元素 返回值为删除元素组成的数组
+        console.log(target.splice(1, 2))
+        console.log(target)
+        </script>
+</body>
+
+</html>

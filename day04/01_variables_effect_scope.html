@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.全局变量
+        let num = 10
+        console.log(num)
+        function fn(){
+            console.log(num)
+        }
+        fn()
+        // 2.局部变量
+        function fun() {
+            let str = 'pink'
+        }
+        console.log(str) //undefined
+        // 3.特殊情况 不加let在内部直接赋值其实是全局变量， 强烈不推荐，有一种情况，内部形参看作局部变量
+        function fn1() {
+            num = 10 //var num = 10
+        }
+        fn1()
+        console.log(num)
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 求数组[2,6,1,7,4]里面所有元素的和以及平均值
+        let arr = [2, 6, 1, 7, 4]
+        // let arr = new Array(2,6,1,7,4)
+        let count = 0
+        for (let index = 0; index < arr.length; index++) {
+            count += arr[index]
+        }
+        document.write(`<span>数组之和为:${count}</span><br>`)
+        document.write(`<span>数组平均值为:${count / arr.length}</span><br>`)
+
+        // 求数组[2,6,1,77,52,25,7]中的最大值
+        let arr1 = [2, 6, 1, 77, 52, 25, 7]
+        let max = arr1[0]
+        let min = arr1[0]
+        for (let index = 1; index < arr1.length; index++) {
+            // if (arr1[index] > max) {
+            //     max = arr1[index]
+            // }
+            arr1[index] > max ? max = arr1[index] : max
+            // if (arr1[index] < min) {
+            //     min = arr1[index]
+            // }
+            arr1[index] < min ? min = arr1[index] : min
+        }
+        document.write(`数组${arr1}的最大值为${max}<br>`)
+        document.write(`数组${arr1}的最小值为${min}<br>`)
+    </script>
+</body>
+
+</html>

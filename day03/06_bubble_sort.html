@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let target = [5, 4, 3, 2, 1]
+        for (let i = 0; i < target.length - 1; i++) {
+            for (let j = 0; j < target.length - i - 1; j++) {
+                if (target[j] > target[j + 1]) {
+                    // 交换2个变量
+                    let num = target[j]
+                    target[j] = target[j + 1]
+                    target[j + 1] = num
+                }
+            }
+        }
+        console.log(target)
+
+        target.sort(function (a, b) {
+            return b - a
+        })
+        console.log(target)
+    </script>
+</body>
+
+</html>

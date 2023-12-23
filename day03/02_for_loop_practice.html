@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            display: inline-block;
+            padding: 5px 10px;
+            border: 1px solid;
+            margin: 2px;
+            width: 100px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px rgba(255, 192, 203, .4);
+            background-color: rgba(255, 192, 203, .1);
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // 输出1-100岁 
+        for (let year = 1; year <= 100; year++) {
+            document.write(`${year}岁<br>`);
+        }
+
+        // 打印1-100偶数和
+        let count = 0
+        for (let index = 0; index <= 100; index++) {
+            index % 2 === 0 ? count += index : null
+        }
+        document.write(`1-100之间所有的偶数和为${count}<br>`)
+        // 打印5个小星星
+        for (let index = 0; index < 5; index++) {
+            document.write('⭐')
+        }
+        document.write('<br><br>')
+        // 打印数组
+        let arr = ['刘德华', '刘晓强', '刘晓庆', '刘若英']
+        for (let index = 0; index < arr.length; index++) {
+            console.log(arr[index]);
+        }
+        // 打印5行5列小星星
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                document.write('⭐')
+            }
+            document.write('<br>')
+        }
+        // 打印倒三角形星星
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write('⭐')
+            }
+            document.write('<br>')
+        }
+        // 打印九九乘法表
+        for (let i = 1; i <= 9; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write(`<span>${j} * ${i} = ${i * j}</span>`)
+            }
+            document.write('<br>')
+        }
+    </script>
+</body>
+
+</html>
