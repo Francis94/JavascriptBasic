@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 单分支语句
+        if (false) {
+            console.log('执行语句')
+        }
+        if (3>5){
+            console.log('执行语句')
+        }
+        console.log('------------------------')
+        // 隐式转换 除了0所有数字为真
+        if (2){
+            console.log('执行语句')
+        }
+        // 隐式转换 除了''所有字符串都为真
+        if ('老师'){
+            console.log('执行语句')
+        }
+        // homework
+        let score = +prompt('请输入成绩')
+        if(score>700){
+            alert('恭喜考入黑马程序员')
+        }
+    </script>
+</body>
+</html>
